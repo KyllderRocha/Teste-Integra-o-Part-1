@@ -12,7 +12,7 @@ package com.ifpe.utils;
 public final class Constantes {
     
     public static String DRIVER = "com.mysql.jdbc.Driver";
-    public static String USER = "root";
+    public static String USER = "root2";
     public static String PASSWORD = "root";
     public static String URL = "jdbc:mysql://localhost:3306/ts?useSSL=false";	
     

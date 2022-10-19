@@ -25,16 +25,21 @@ protected PreparedStatement ps;
     public void abrirConexao() throws Exception {
 //    Class.forName(Constantes.DRIVER);
         con = (Connection) DriverManager.getConnection(Constantes.URL, Constantes.USER, Constantes.PASSWORD);
-        
-
-        
+        con.setAutoCommit(false);
     }
 
     public void fecharConexao() throws Exception{
         con.close();
+        Rollback();
     }
    
+    public void Commit() throws Exception{
+        con.commit();
+    }
 
+    public void Rollback() throws Exception{
+        con.rollback();
+    }
     
     
 }
